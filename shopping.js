@@ -1,34 +1,28 @@
-const submitButton = document.getElementById("my-submit");
-const removeButton = document.getElementById("my-remove");
-const selectBox = document.getElementById("my-select");
-const selected = document.getElementById("my-select").selectedIndex;
+const addButton = document.getElementById("my-addButton");
+const removeButton = document.getElementById("my-removeButton");
+const list = document.getElementById("my-list");
+// document.querySelector("click")
 
-submitButton.addEventListener("click", function () {
+console.log(addButton);
+console.log(removeButton);
+console.log(list);
+
+addButton.addEventListener("click", function () {
 
     const userInput = document.getElementById("my-input").value;
 
-    // Create option element
-    let opt = document.createElement("option");
-    opt.setAttribute("value", "product");
-    // Create text node with the user input || Assign text to option element
-    let input = document.createTextNode(userInput);
-    opt.appendChild(input);
-    // Add the option element to the select box
-    selectBox.appendChild(opt);
+    let btn = document.createElement("button");
+    btn.setAttribute("type", "button");
+    btn.setAttribute("class", "list-group-item list-group-item-action");
+
+    let text = document.createTextNode(userInput);
+    btn.appendChild(text);
+    list.appendChild(btn);
 });
 
 removeButton.addEventListener("click", function () {
 
     selectBox.remove(selectBox.selectedIndex);
-});
-
-selectBox.addEventListener("click", function () {
-    console.log("Clicked");
-
-    // var options = selectBox.querySelectorAll("option");
-    //     options.backgroundColor = "red";
-    //     console.log("Selected Index: " + options.values);
-    //     console.log("Options Length: " + options.length);
 });
 
 
