@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="col-12 mt-3">
+            <header>
+                <h1>To-Do List</h1>
+            </header>
+        </div>
+    </div>
+    <!--End of header container-->
+    <hr>
+    <div class="container">
+        <div class="col-12">
+            <p>Övningen består i att skapa en applikation som skapar en inköpslista. Användaren ska ha möjlighet att
+                skriva in olika saker som ska inhandlas som sedan läggstill i listan.</p>
+            <ul>
+                <li>Texten blir då överstruken samt elementet ändrar bakgrundsfärg. Det ska gå att ångra att varan blev
+                    tillagd.</li>
+                <li>Texten återgår då från överstruken till normal samt elementet återfår sin ursprungliga färg.</li>
+                <li>Det ska även finnas en möjlighet att ta bort varan helt från listan.</li>
+            </ul>
+        </div>
+    </div>
+    <!--End of info container-->
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <form class="form-group">
+                    <label for="product" class="mr-sm-2 mb-2">Product: </label>
+                    <input type="text" class="form-control mr-sm-2 mb-2" placeholder="Enter product" id="product">
+                    <button id="my-submit" type="button" class="btn btn-primary mr-sm-2 mb-2">Submit</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="shop-list">Shopping List:</label>
+                    <select multiple class="form-control" id="my-select" name="sellist2"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of main container-->
+    <hr>
+    <div class="container">
+        <footer>
+            <p>&copy; Joakim Malmström 2020</p>
+        </footer>
+    </div>
+    <!--End of footer container-->
+    <hr>
+
+
     <script src="shopping.js"></script>
 </body>
+
 </html>
