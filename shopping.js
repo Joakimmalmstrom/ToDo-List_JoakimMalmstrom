@@ -2,9 +2,6 @@ const addButton = document.getElementById("my-addButton");
 const removeButton = document.getElementById("my-removeButton");
 const list = document.getElementById("my-list");
 
-var selectedText = list.button[list].text;
-console.log(selectedText);
-
 addButton.addEventListener("click", function () {
 
     const userInput = document.getElementById("my-input").value;
