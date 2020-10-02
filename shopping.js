@@ -1,11 +1,9 @@
 const addButton = document.getElementById("my-addButton");
 const removeButton = document.getElementById("my-removeButton");
 const list = document.getElementById("my-list");
-// document.querySelector("click")
 
-console.log(addButton);
-console.log(removeButton);
-console.log(list);
+var selectedText = list.button[list].text;
+console.log(selectedText);
 
 addButton.addEventListener("click", function () {
 
@@ -13,7 +11,7 @@ addButton.addEventListener("click", function () {
 
     let btn = document.createElement("button");
     btn.setAttribute("type", "button");
-    btn.setAttribute("class", "list-group-item list-group-item-action");
+    btn.setAttribute("class", "list-group-item list-group-item-action my-list-item");
 
     let text = document.createTextNode(userInput);
     btn.appendChild(text);
@@ -22,8 +20,13 @@ addButton.addEventListener("click", function () {
 
 removeButton.addEventListener("click", function () {
 
-    selectBox.remove(selectBox.selectedIndex);
+    // How do I know which child is selected?
+    // list.removeChild()
 });
+
+function removeButtonShow() {
+
+}
 
 
 // BUTTON CLICK
